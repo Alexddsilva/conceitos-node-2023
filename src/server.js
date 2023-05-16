@@ -2,7 +2,9 @@ import http from "node:http";
 
 //GET, POST, PUT, PATCH, DELETE
 //JSON - JavaScript Object Notation
+// Statefull - Stateless
 //Cabeçalhos (Request/response) => Metadata
+//HTTP Status Code
 
 const users = [];
 
@@ -21,12 +23,12 @@ const server = http.createServer((req, res) => {
 			name: "John Doe",
 			email: "jhondoe@example.com",
 		});
-		return res.end("Criação de usuarios");
+		return res.writeHead(201).end();
 	}
 
 	console.log(method, url);
 
-	return res.end("Hello World auto change");
+	return res.writeHead(404).end();
 });
 
 server.listen(3333);
