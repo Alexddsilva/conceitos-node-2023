@@ -34,6 +34,8 @@ export const routes = [
 		path: buildRoutePath("/users/:id"),
 		handler: (req, res) => {
 			// const { id } = req.params;
+
+			return res.writeHead(201).end();
 		},
 	},
 ];
