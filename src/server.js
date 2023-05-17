@@ -8,6 +8,10 @@ import { routes } from "./routes.js";
 //Cabeçalhos (Request/response) => Metadata
 //HTTP Status Code
 
+// Query Parameters: URL Stateful => filtros, paginação, não obrigatórios 'http://localhost:3333/users?userId=1&name='Alex'
+// Route Parameters: ex: Identificação de recurso =>  GET | http://localhost:3333/users/1
+// Request Body: Dados em geral
+
 const server = http.createServer(async (req, res) => {
 	const { method, url } = req;
 
